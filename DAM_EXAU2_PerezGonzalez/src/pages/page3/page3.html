@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Página 3</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        Hola {{nombre}}!
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="myForm">
+        <ion-list>
+             <ion-item>
+                <ion-label floating>Nombre</ion-label>
+                <ion-input type="text" [(ngModel)]="nombre" formControlName="name"></ion-input>
+             </ion-item>
+             <ion-item>
+                <ion-label floating>Apellido Materno</ion-label>
+                <ion-input type="text" [(ngModel)]="materno" formControlName="mat"></ion-input>
+             </ion-item>
+             <ion-item>
+                <ion-label floating>Apellido Paterno</ion-label>
+                <ion-input type="text" [(ngModel)]="paterno" formControlName="pat"></ion-input>
+             </ion-item>
+             <ion-item>
+               <ion-label>Fecha</ion-label>
+               <ion-datetime  displayFormat="YYYY-MM-DD" pickerFormat="YYYY MM DD" ></ion-datetime>
+             </ion-item>
+             <ion-item>
+                <ion-label >RFC</ion-label>
+                <ion-input disabled="true" type="text" ></ion-input>
+             </ion-item>
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

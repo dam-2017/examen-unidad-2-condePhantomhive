@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Iniciar Sesión
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <form [formGroup]="myForm">
+           <ion-item>
+              <ion-label floating>Nombre de usuario:</ion-label>
+              <ion-input type="text" [(ngModel)]="u" formControlName="usuario"></ion-input>
+           </ion-item>
+           
+           <ion-item> 
+              <ion-label floating>Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="p" formControlName="contra"></ion-input>                  
+           </ion-item>
+           
+        </form>
+        <button ion-button block color="primary" (click)="gotoOtherPage()">Iniciar</button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
